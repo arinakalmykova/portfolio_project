@@ -29,6 +29,7 @@ SEO и доступность (A11Y)
 Footer – контакты и социальные иконки
 
 Структура проекта
+<code>
 /project-root
 │
 ├─ index.html
@@ -42,7 +43,7 @@ Footer – контакты и социальные иконки
 │   ├─ github.svg
 │   └─ telegram.svg
 └─ README.md
-
+</code>
 Технологии
 
 HTML5
