@@ -1,0 +1,195 @@
+@font-face {
+	font-family: 'HeliosCondC';
+	src: url('fonts/helioscondc.eot'); /* IE 9 Compatibility Mode */
+	src: url('fonts/helioscondc.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('fonts/helioscondc.woff2') format('woff2'), /* Super Modern Browsers */
+		url('fonts/helioscondc.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('fonts/helioscondc.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('fonts/helioscondc.svg#helioscondc') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+@import url('https://fonts.cdnfonts.com/css/miracle-world-personal-use');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+}
+:root{
+    --color-primary:#7291E3;
+    --color-base:black;
+    --color-base-two:white;
+    --font-one:'Miracle World Personal Use';
+    --font-two:'HeliosCondC';
+    --space-between-sections:10em;
+    --space-inter-sections:2em;
+
+}
+h1{
+    font-family: var(--font-one,'sans-serif');
+    font-weight:800; 
+    font-size: 9em ;
+}
+
+h2{
+    font-family: var(--font-one,'sans-serif');
+    font-weight:700; 
+    font-size: 3em;
+}
+
+h3{
+    font-family: var(--font-two,'sans-serif');
+    font-weight:700; 
+    font-size: var(--space-inter-sections,2em);
+}
+
+h4{
+    font-family: var(--font-two,'sans-serif');
+    font-weight:500; 
+    font-size: 0.9em ;
+}
+.container{
+    margin: 50px 200px 50px 200px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.header{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.header__list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.header__list li{
+    list-style: none;
+    font-family: 'Montserrat','arial';
+    font-weight:600; 
+    font-size: 16px ;
+    display: block;
+}
+
+.header__list li a{
+    text-decoration: none;
+    color: var(--color-base,var(--color-base,var(--color-base,var(--color-base,var(--color-base,var(--color-base,var(--color-base,black)))))));
+    font-family: var(--font-two,'sans-serif');
+    font-weight:500; 
+    font-size: 1.2em;
+    
+}
+
+.header__list li a:hover{
+    color: var(--color-primary,#7291E3);
+}
+
+.header__logo{
+    justify-self: flex-start;
+}
+
+.main__content{
+    margin-top: var(--space-inter-sections,2em);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.main__img{
+    width: 60%;
+    margin-left: auto;
+    z-index: 1;
+    transform: translateX(-200px);
+}
+
+.main__title{
+    position: relative;
+    color: var(--color-primary,#7291E3);
+    margin: 1em 0 0 0;
+    z-index: 2;
+}
+
+.main__description{
+    width: 30em;
+    position: relative;
+    padding: 20px;
+    transform: translateY(3em);
+    border-left: solid var(--color-base,black) 2px;
+}
+
+.main__content-text{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-inter-sections,2em);
+}
+
+.main__btn_primary{
+    padding: 20px 30px 20px 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--color-primary,#7291E3);
+    color: var(--color-base-two,var(--color-base-two,white));
+    font-family: var(--font-two,'sans-serif');
+    font-weight:800;
+    text-transform: uppercase;
+    font-size: 1em;
+    text-decoration: none;
+    position: relative;
+    width: 10em;
+}
+
+.main__btn_primary:hover{
+    border: solid 2px var(--color-primary,#7291E3);
+    background-color: inherit;
+    color:var(--color-primary,#7291E3) ;
+}
+
+.about{
+    margin-top: var(--space-between-sections,4em);
+}
+
+.about__title{
+    text-transform: uppercase;
+    align-self: self-end;
+    margin: 0;
+    letter-spacing: 0.05em;
+}
+
+span{
+    font-family: var(--font-two,'sans-serif');
+    font-weight:900; 
+    font-size: 2em;
+}
+
+.about__title_two{
+    text-transform: uppercase;
+    color: var(--color-primary,#7291E3);
+}
+
+.about__content{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+.about__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.about__text-description{
+    display: flex;
+    flex-direction: column;
+}
+
+a:focus {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+  box-shadow: 0 0 5px rgba(114,145,227,0.7);
+}
