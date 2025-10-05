@@ -15,7 +15,7 @@ body {
     box-sizing: border-box ;
 }
 :root{
-    --color-primary:#7291E3;
+    --color-primary:#8CAEF5;
     --color-base:black;
     --color-base-two:white;
     --font-one:'Miracle World Personal Use';
@@ -129,7 +129,7 @@ h4{
     gap: var(--space-inter-sections,2em);
 }
 
-.main__btn_primary{
+.btn{
     padding: 20px 30px 20px 30px;
     border: none;
     border-radius: 10px;
@@ -144,7 +144,7 @@ h4{
     width: 10em;
 }
 
-.main__btn_primary:hover, .main__btn_primary:active{
+.btn:hover, .btn:active{
     border: solid 2px var(--color-primary,#7291E3);
     background-color: inherit;
     color:var(--color-primary,#7291E3) ;
@@ -275,5 +275,90 @@ a:focus {
 
 .projects__list li{
     list-style: none;
+}
+
+.contacts{
+    margin-top:var(--space-between-sections);
+}
+
+.contacts__container{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+}
+
+.contacts__container img{
+    width: 50%;
+}
+
+.contacts__title{
+    text-transform: uppercase;
+}
+
+.contacts__form{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-inter-sections);
+}
+
+input[type=text],input[type=number]{
+    padding: 20px;
+    border: none;
+    font-family: var(--font-two);
+    font-size: 1em;
+    margin-top: 10px;
+    outline: none;
+    border-bottom: solid 1px var(--color-base);
+}
+
+.contacts__form input::placeholder{
+    opacity: 0.5;
+}
+
+
+.contacts__form-element{
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts__form-element label{
+    text-transform: uppercase;
+    font-family: var(--font-two);
+    font-weight: 700;
+}
+.contacts__btn-secondary{
+    width: 12em;
+    margin: auto;
+}
+
+.footer{
+    border-top: solid 1px var(--color-base);
+    padding: 50px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--space-between-sections);
+}
+
+.footer__icons{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.footer__icon img{
+    width:10%;
+}
+
+.footer__logo img{
+    width: 30%;
+}
+
+.footer__phone{
+    font-family: var(--font-two);
+    font-size: 1.5em;
+    font-weight: 900;
 }
 

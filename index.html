@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frontend Developer</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
                         <h4>Создаю современные веб-решения и дизайн, которые помогают бизнесу расти, привлекать клиентов и повышать продажи. </h4>
                     </div>
                     <h1 class="main__title">Development and design</h1>
-                    <a class="main__btn_primary" role="button" tabindex="0" href="#" type="submit">Связаться со мной</a>
+                    <a class="main__btn_primary btn" role="button" tabindex="0" href="#" type="submit">Связаться со мной</a>
                 </div>
                 <img class="main__img" src="image/main_foto.png" alt="Фото главной">
             </div>
@@ -81,14 +81,38 @@
                 <div id="design" class="projects__grid">
                     <div class="projects__card"><img src="" alt="Дизайн магазина мебели"></div>
                     <div class="projects__card"><img src="" alt="Карточки на маркетплейсах"></div>
-                    <div class="projects__card"><img src="" alt="не знаю"></div>
+                    <div class="projects__card"><img src="" alt="Дизайн меню"></div>
                 </div>
             </div> 
         </section>
         <section class="contacts">
-
+            <div class="contacts__container">
+                <img src="image/contacts_foto.png" alt="Перо">
+                <div class="contacts__content">
+                    <h2 class="contacts__title">Свяжитесь со мной</h2>
+                    <form action="index.js" method="POST" class="contacts__form">
+                        <div class="contacts__form-element">
+                            <label for="name">Ваше имя</label>
+                            <input type="text" placeholder="Введите имя" id="name" name="name" required>
+                        </div>
+                         <div class="contacts__form-element">
+                            <label for="phone" >Ваш телефон</label>
+                            <input type="number" placeholder="Введите номер телефона" id="phone" name="phone" required>
+                        </div>
+                        
+                        <button type="submit" class="contacts__btn-secondary btn ">Оставить заяку</a>
+                    </form>
+                </div>
+            </div>
         </section>
-        <footer></footer>
+        <footer class="footer">
+            <div class="footer__phone">8 (123) 456-78-91</div>
+            <img class="footer__logo" src="image/Rikale.svg" alt="Логотип">
+            <div class="footer__icons">
+               <a href="#"><img class="footer__icon" src="image/github.svg" alt="GitHub"></a>
+               <a href="#"><img class="footer__icon" src="image/telegram.svg" alt="Telegram"></a>
+            </div>
+        </footer>
     </div>
     <script src="index.js"></script>
 </body>
