@@ -13,7 +13,9 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box ;
+    padding: 50px 0 ;
 }
+
 :root{
     --color-primary:#8CAEF5;
     --color-base:black;
@@ -24,22 +26,23 @@ body {
     --space-inter-sections:2em;
 
 }
+
 h1{
     font-family: var(--font-one,'sans-serif');
     font-weight:800; 
-    font-size: 9em ;
+    font-size: 10vw ;
 }
 
 h2{
     font-family: var(--font-one,'sans-serif');
     font-weight:700; 
-    font-size: 3em;
+    font-size: 2em;
 }
 
 h3{
     font-family: var(--font-two,'sans-serif');
     font-weight:700; 
-    font-size: var(--space-inter-sections,2em);
+    font-size: 2vw;
 }
 
 h4{
@@ -47,13 +50,12 @@ h4{
     font-weight:500; 
     font-size: 0.9em ;
 }
+
 .container{
-    margin: 50px 200px 50px 200px;
-    max-width: 1200px;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
 }
-
 
 .header{
     display: flex;
@@ -85,6 +87,9 @@ h4{
     font-size: 1.2em;
     
 }
+.header__menu{
+    display: none;
+}
 
 .header__list li a:hover{
     color: var(--color-primary,#7291E3);
@@ -102,10 +107,9 @@ h4{
 }
 
 .main__img{
-    width: 60%;
+    max-width: 60%;
     margin-left: auto;
     z-index: 1;
-    transform: translateX(-200px);
 }
 
 .main__title{
@@ -116,7 +120,7 @@ h4{
 }
 
 .main__description{
-    width: 30em;
+    max-width: 30em;
     position: relative;
     padding: 20px;
     transform: translateY(3em);
@@ -141,13 +145,15 @@ h4{
     font-size: 1em;
     text-decoration: none;
     position: relative;
-    width: 10em;
+    max-width: 10em;
+    border: 2px solid transparent;
 }
 
 .btn:hover, .btn:active{
     border: solid 2px var(--color-primary,#7291E3);
     background-color: inherit;
     color:var(--color-primary,#7291E3) ;
+    transition: background-color 0.5s linear 0.01s;
 }
 
 .about{
@@ -208,6 +214,7 @@ a:focus {
 .skills__title{
     text-transform: uppercase;
     text-align: left;
+    margin: 0;
 }
 
 .skills__grid{
@@ -242,7 +249,7 @@ a:focus {
   display: none;
 }
 
-#developer:target, #design:target{
+.projects__grid.active {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -289,7 +296,7 @@ a:focus {
 }
 
 .contacts__container img{
-    width: 50%;
+    max-width: 50%;
 }
 
 .contacts__title{
@@ -328,7 +335,7 @@ input[type=text],input[type=number]{
     font-weight: 700;
 }
 .contacts__btn-secondary{
-    width: 12em;
+    max-width: 12em;
     margin: auto;
 }
 
@@ -349,11 +356,11 @@ input[type=text],input[type=number]{
 }
 
 .footer__icon img{
-    width:10%;
+    max-width:10%;
 }
 
 .footer__logo img{
-    width: 30%;
+    max-width: 30%;
 }
 
 .footer__phone{
@@ -362,3 +369,218 @@ input[type=text],input[type=number]{
     font-weight: 900;
 }
 
+@media screen and (max-width: 576px) {
+    .container{
+        max-width: 360px;
+        margin: auto;
+    }
+
+    .header{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .main__content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main__title{
+        text-align: center;
+    }
+    .main__img{
+        order:-1;
+        max-width: 90%;
+        margin: auto;
+    }
+
+    .main__content-text{
+        align-items: center;
+    }
+
+      .about__img{
+      width: 90%;
+      order: -1;
+    }
+
+    .about__content{
+        flex-direction: column;
+    }
+
+    .about__text{
+        gap: 30px;
+    }
+
+    .contacts__container img{
+        display: none;
+    }
+
+    .footer__logo{
+        display: none;
+    }
+
+    .contacts__container{
+        margin: auto;
+    }
+
+    .header__menu{
+        display: block;
+        width: 15%;
+        height: 15%;
+        margin: auto;
+    }
+
+    .header__menu-wrapper {
+    position: relative;
+    display: inline-block;
+    }
+
+    .header__menu-wrapper:hover #list{
+        display: block;
+        padding: 20px;
+        border:solid 1px var(--color-base);
+        border-radius:10px ;
+        color: var(--color-base);
+        text-align: center;
+    }
+
+    .header__list{
+        display: none;
+    }
+}
+@media screen and (min-width: 576px) and (max-width:768px){
+    .container{
+        max-width: 500px;
+        margin: auto;
+    }
+
+    .header{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .main__content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main__title{
+        text-align: center;
+    }
+    .main__img{
+        order:-1;
+        max-width: 90%;
+        margin: auto;
+    }
+
+    .main__content-text{
+        align-items: center;
+    }
+
+      .about__img{
+      width: 90%;
+      order: -1;
+    }
+
+    .about__content{
+        flex-direction: column;
+    }
+
+    .about__text{
+        gap: 30px;
+    }
+
+    .contacts__container img{
+        display: none;
+    }
+
+    .footer__logo{
+        display: none;
+    }
+
+    .contacts__container{
+        margin: auto;
+        display: inline;
+    }
+}
+
+/* Medium (md) – устройства от 768px */
+@media screen and (min-width: 768px) and (max-width:992px) {
+    .container{
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .header{
+        flex-direction: row;
+    }
+
+    .main__img{
+        max-width: 90%;
+        transform: translateX(-270px);
+    }
+
+    .about__img{
+      width: 90%;
+      order: -1;
+    }
+
+    .about__content{
+        flex-direction: column;
+    }
+
+    .about__text{
+        gap: 30px;
+    }
+}
+
+/* Large (lg) – устройства от 992px */
+@media screen and (min-width: 992px) and (max-width:1200px) {
+    .container{
+        max-width: 768px;
+        margin: auto;
+    }
+
+    .main__img{
+        max-width: 80%;
+        transform: translateX(-270px);
+    }
+}
+/* Exstra Large (xl) – устройства от 1200px */
+@media screen and (min-width: 1200px) and (max-width:1400px) {
+    .container{
+        max-width: 992px;
+        margin: auto;
+    }
+
+    .main__img{
+        max-width: 70%;
+        transform: translateX(-250px);
+    }
+}
+
+/* Extra extra large (xxl) – устройства от 1400px */
+@media screen and (min-width: 1400px) and (max-width:1600px) {
+    .container{
+        max-width: 1200px;
+        margin: auto;
+    }
+    .main__img{
+        max-width: 60%;
+        transform: translateX(-250px);
+    }
+}
+
+@media screen and (min-width: 1600px){
+    .container{
+        max-width: 1400px;
+        margin: auto;
+    }
+
+    .main__img{
+        max-width: 60%;
+        transform: translateX(-250px);
+    }
+}
